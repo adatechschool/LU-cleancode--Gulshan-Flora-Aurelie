@@ -28,8 +28,50 @@
         <p></p>
 
     <h2>DRY, KISS, SOLID</h2>
-        <p></p>
-        
+        <h3>DRY</h3>
+            <p>DON'T REPEAT YOURSELF = minimalisme 
+            VS WET = We Enjoy Typing, Write Everything Twice, Waste Everyone's Time.</p>
+        <h3>KISS</h3>
+            <p>KEEP IT SIMPLE STUPID = le code fonctionne mieux quand il est simple et non complexe. 
+            Aller à l'essentiel.</p>
+        <h3>SOLID</h3>
+            <p>S.O.L.I.D sont cinq principes de la programmation orientée objet, 
+                définits par Robert C.Martin dans son livre « Design Principles and Design Patterns » 
+                paru en 2000.  Ce sont un ensemble de principes que chaque développeur se doit de respecter 
+                pour écrire un code propre, maintenable et extensible.
+                <ul>
+                    <li>Single Responsibility Principle : chaque composant dans le code n’a qu’une seule et unique responsabilité, 
+                        les classes et les méthodes ne gèrent qu’une chose à la fois, 
+                        on dit que la classe ne doit avoir qu’une seule raison de changer.</li>
+                    <li>Open CLosed Principle : Ce principe dit que chaque composant doit être ouvert à 
+                        l’extension et fermé à la modification. Ce qui veut dire qu’une fois une classe 
+                        créée et déployée on ne pourra que l’étendre 
+                        (plus de recompilation de code existant pour ajouter de nouvelles fonctionnalités).
+                        En respectant ce principe, on garantit une facilité à faire évoluer le code sans 
+                        difficulté liée à l’existant surtout s’il s’agit d’un code qu’on ne maitrise pas.</li>
+                    <li>Liskov Substitution Principle : Pour une classe donnée héritant/implémentant d’une 
+                        classe mère/une interface, on doit pouvoir remplacer la classe fille par la classe 
+                        mère sans changer quoique ce soit dans le code. 
+                        Afin de respecter ce principe certaines règles devront être appliquées 
+                        pour les deux classes (mère et fille) : 
+                        <ul>
+                            <li>Les signatures de leurs méthodes doivent être les mêmes pour chacune des méthodes.</li>
+                            <li>Le nombre de préconditions et de postconditions de toute méthode de la classe fille ne doit pas être supérieur à celui de son parent</li>
+                            <li>La gestion d’exception doit être la même entre la classe fille et la classe mère</li>
+                        </ul>                                            
+                    <li>Interface Segregation Principle : Ce principe affirme qu’aucun objet ne doit dépendre 
+                        de méthodes qu’il n’utilise pas. Autrement dit, il ne faut pas avoir des interfaces 
+                        ou des classes génériques dont quelques méthodes ne seront pas utilisées par leurs clients.</li>
+                    <li>Dependency Inversion Principle :
+                        Ce principe dit que les composant haut niveau ne doivent pas dépendre des composants bas
+                        niveau, chacun doit dépendre des abstractions. C’est-à-dire que pour une classe livre 
+                        (Book) qui une couverture (Cover) et des pages (Pages), 
+                        Book ne devra pas avoir les classes Cover et Pages mais plutôt des abstractions 
+                        (classe abstraites ou interfaces) qui vont être définies en dehors de la classe (Book)
+                    <a href="https://m-applications.devoteam.com/wp-content/uploads/sites/231/2020/01/Clean-Coding-018.png" target="_blank">Schéma</a></li>
+                    
+                </ul>
+            </p>
     <h2>Linter</h2>
         <p></p>
     

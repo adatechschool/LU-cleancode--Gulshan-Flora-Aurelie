@@ -10,22 +10,61 @@
     <h1>EXPLIQUER - CLEAN CODE</h1>
 
     <h2>Factorisation</h2>
-        <p></p>
+        <p>Refonte du codes qui a accumulé des "lignes sales". 
+        Tout comme pour la relecture, qui emploie différentes approches comme raccourcir une phrase, 
+        reformuler, supprimer ou restructurer, le refactoring s’appuie sur plusieurs méthodes comme l’encapsulation, 
+        le reformatage ou l’extraction pour optimiser un code sans altérer son fonctionnement.
+        Le refactoring a pour but de produire un meilleur code, maintenable dans le temps.</p>
 
     <h2>Dette technique</h2>
-        <p></p>
+        <p>Un projet de développement logiciel inclut souvent une conception logicielle, formalisée ou non. 
+        L'écriture du code source, selon la conception définie, assure la cohérence du projet et facilite 
+        sa maintenance. La dette technique peut être accrue lors d'une codification non optimale. 
+        Une conception logicielle négligée induit des coûts futurs : 
+        les intérêts, à rembourser sous forme de temps de développement supplémentaire 
+        et de bugs de plus en plus fréquents2. La dette technique doit être remboursée rapidement 
+        pour éviter l'accumulation de ces intérêts, d'où l'analogie avec le concept de dette financière.</p>
 
     <h2>Isofonctionnel</h2>
         <p></p>
 
     <h2>Code smell</h2>
-        <p></p>
+        <p>Un code smell est un code issu de mauvaises pratiques qui entraînent des défauts et 
+        une complexification du code lorsqu'il doit être maintenu. Son evolutivité est 
+        donc rendu difficile.</p>
 
     <h2>Design pattern, anti-pattern</h2>
-        <p></p>
+            <h3>Design pattern</h3>
+                <p>En informatique, et plus particulièrement en développement logiciel, 
+                un patron de conception (souvent appelé design pattern) est un arrangement caractéristique de modules, 
+                reconnu comme bonne pratique en réponse à un problème de conception d'un logiciel. 
+                Il décrit une solution standard, utilisable dans la conception de différents logiciels.</p>
+            <h3>Anti-pattern</h3>
+                <p>En génie logiciel, les anti-patrons ou antipatterns sont des erreurs courantes de conception 
+                des logiciels. Leur nom vient du fait que ces erreurs sont apparues dès les phases de conception 
+                du logiciel, notamment par l'absence ou la mauvaise utilisation de patrons de conception, 
+                appelés design pattern en anglais.<br>
+                Les anti-patrons se caractérisent souvent par une lenteur excessive du logiciel, 
+                des coûts de réalisation ou de maintenance élevés, des comportements anormaux 
+                et la présence de bugs.<br>                   
+                Il existe également les GreyPatterns (dont le bénéfice ou les inconvénients 
+                ne sont pas clairement établis).</p>
 
     <h2>Code legacy</h2>
-        <p></p>
+        <p>Le terme « code legacy » est utilisé en informatique et peut être traduit par « ancien code » 
+            ou « code hérité ». Il s’agit d’un code ancien qui ne fait généralement plus l’objet 
+            d’un développement actif. À certains égards, le code legacy est le contraire du clean code 
+            qui est compréhensible de façon intuitive, particulièrement simple à entretenir et facilement 
+            adaptable. Le code legacy est un code plus volumineux, répétitif et désordonné, 
+            pouvant entraîner de nombreux problèmes. La signification accordée à ce terme dépend fortement 
+            du point de vue du développeur et de la situation concernée.
+            En principe, le code legacy se distingue toutefois par les aspects suivants :
+            <ul>
+                <li>Le code n’est plus entretenu pas les développeurs initiaux.</li>
+                <li>À l’origine, le code a été écrit pour des systèmes d’exploitation qui ne sont plus supportés.</li>
+                <li>Le code ne permet pas la réalisation de tests automatisés.</li>
+            </ul>
+            </p>
 
     <h2>DRY, KISS, SOLID</h2>
         <h3>DRY</h3>
@@ -69,11 +108,18 @@
                         Book ne devra pas avoir les classes Cover et Pages mais plutôt des abstractions 
                         (classe abstraites ou interfaces) qui vont être définies en dehors de la classe (Book)
                     <a href="https://m-applications.devoteam.com/wp-content/uploads/sites/231/2020/01/Clean-Coding-018.png" target="_blank">Schéma</a></li>
-                    
                 </ul>
             </p>
+            
     <h2>Linter</h2>
-        <p></p>
+        <p>Le Linter est un outil d’analyse de code qui permet de détecter les erreurs 
+            et les problèmes de syntaxe.<br>
+            Linter son code permet de le rendre : 
+            <ul>
+                <li>Plus fiable</li>
+                <li>Plus facile à corriger en cas de besoin</li>
+            </ul>  
+        </p>
     
 
 

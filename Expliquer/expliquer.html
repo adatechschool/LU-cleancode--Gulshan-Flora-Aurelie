@@ -4,15 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Clean Code</title>
 </head>
 <body>
     <h1>EXPLIQUER - CLEAN CODE</h1>
 
     <h2>Factorisation</h2>
+        <p>Condenser en fonction</p>
+
+    <h2>Refactoring</h2>
         <p>Refonte du code qui a accumulé des "lignes sales". 
         Tout comme pour la relecture, qui emploie différentes approches comme raccourcir une phrase, 
-        reformuler, supprimer ou restructurer, le refactoring s’appuie sur plusieurs méthodes comme l’encapsulation, 
+        reformuler, supprimer ou restructurer, le refactoring s’appuie sur plusieurs méthodes comme l’encapsulation 
+        (protéger des données de modifications innatendues), 
         le reformatage ou l’extraction pour optimiser un code sans altérer son fonctionnement.
         Le refactoring a pour but de produire un meilleur code, maintenable dans le temps.</p>
 
@@ -22,11 +26,12 @@
         sa maintenance. La dette technique peut être accrue lors d'une codification non optimale. 
         Une conception logicielle négligée induit des coûts futurs : 
         les intérêts, à rembourser sous forme de temps de développement supplémentaire 
-        et de bugs de plus en plus fréquents2. La dette technique doit être remboursée rapidement 
+        et de bugs de plus en plus fréquents. La dette technique doit être remboursée rapidement 
         pour éviter l'accumulation de ces intérêts, d'où l'analogie avec le concept de dette financière.</p>
 
     <h2>Isofonctionnel</h2>
-        <p></p>
+        <p>Résultat souhaité sur un code cleanné : le rendu final reste le même, 
+            seul le code source est modifié (si besoin)</p>
 
     <h2>Code smell</h2>
         <p>Un code smell est un code issu de mauvaises pratiques qui entraînent des défauts et 
@@ -38,7 +43,8 @@
                 <p>En informatique, et plus particulièrement en développement logiciel, 
                 un patron de conception (souvent appelé design pattern) est un arrangement caractéristique de modules, 
                 reconnu comme bonne pratique en réponse à un problème de conception d'un logiciel. 
-                Il décrit une solution standard, utilisable dans la conception de différents logiciels.</p>
+                Il décrit une solution standard, utilisable dans la conception de différents logiciels.
+                = modèle de conception</p>
             <h3>Anti-pattern</h3>
                 <p>En génie logiciel, les anti-patrons ou antipatterns sont des erreurs courantes de conception 
                 des logiciels. Leur nom vient du fait que ces erreurs sont apparues dès les phases de conception 
@@ -47,7 +53,7 @@
                 Les anti-patrons se caractérisent souvent par une lenteur excessive du logiciel, 
                 des coûts de réalisation ou de maintenance élevés, des comportements anormaux 
                 et la présence de bugs.<br>                   
-                Il existe également les GreyPatterns (dont le bénéfice ou les inconvénients 
+                Il existe également les GreyPatterns (dont les bénéfices ou les inconvénients 
                 ne sont pas clairement établis).</p>
 
     <h2>Code legacy</h2>
@@ -64,6 +70,7 @@
                 <li>À l’origine, le code a été écrit pour des systèmes d’exploitation qui ne sont plus supportés.</li>
                 <li>Le code ne permet pas la réalisation de tests automatisés.</li>
             </ul>
+            ex : codes des banques en langages Fortran / Cowboy
             </p>
 
     <h2>DRY, KISS, SOLID</h2>
@@ -96,7 +103,8 @@
                         pour les deux classes (mère et fille) : 
                         <ul>
                             <li>Les signatures de leurs méthodes doivent être les mêmes pour chacune des méthodes.</li>
-                            <li>Le nombre de préconditions et de postconditions de toute méthode de la classe fille ne doit pas être supérieur à celui de son parent</li>
+                            <li>Le nombre de préconditions et de postconditions de toute méthode de la classe fille 
+                                ne doit pas être supérieur à celui de son parent</li>
                             <li>La gestion d’exception doit être la même entre la classe fille et la classe mère</li>
                         </ul>                                            
                     <li>Interface Segregation Principle : Ce principe affirme qu’aucun objet ne doit dépendre 
@@ -121,7 +129,40 @@
                 <li>Plus facile à corriger en cas de besoin</li>
             </ul>  
         </p>
-    
+
+    <h2>Exemples</h2>
+
+        // // tableau de résultat <br>
+            // o = [] <br>
+            // a = "Fizz" <br>
+            // b = "Buzz" // variable "buz" pour les multiples de 3 <br>
+            // f = function(i){for(d=1;d<=i;d++)o.push(d%15==0?a+b:d%3==0?a:d%5==0?b:d);return o} <br> <br>
+            
+            
+            var o = []; <br>
+            var a = "Fizz"; <br>
+            var b = "Buzz"; <br>
+            var f = function(i){ <br> <br>
+                
+                for(let d=1;d<=i;d++){ <br>
+                    if (d%15==0){ <br>
+                        o.push(a+b); <br>
+                    } <br>
+                    else if (d%3==0){ <br>
+                        o.push(a); <br>
+                    } <br>
+                    else if(d%5==0){ <br>
+                        o.push(b); <br>
+                    } <br>
+                    else { <br>
+                        o.push(d); <br>
+                    } <br>   
+                } <br>
+                return o <br>
+                
+             }<br> <br>
+            
+             console.log(f(23)); <br>
 
 
 
